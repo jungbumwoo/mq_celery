@@ -1,5 +1,5 @@
 from app2.forms import ReviewForm
-from django.views.genric.edit import FormView
+from django.views.generic.edit import FormView
 from django.http import HttpResponse
 
 class ReviewEmailView(FormView):

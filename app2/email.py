@@ -13,8 +13,9 @@ def send_review_email(name, email, review):
 
     email_subject = 'Thank you for your reivew'
     email_body = render_to_string('email_message.txt', context)
-
+    print('send email at email.py')
     email = EmailMessage(
         email_subject, email_body,
         settings.DEFAULT_FROM_EMAIL, [email, ],
     )
+    return email.send(fail_silently=True)
